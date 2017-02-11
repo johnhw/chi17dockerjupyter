@@ -4,7 +4,4 @@ RUN pip2 install yapf
 RUN jt -t grade3 -f fira -nf oxygensans -tf oxygensans -T
 RUN jupyter contrib nbextension install --user
 ADD .jupyter /home/jovyan/.jupyter/
-ADD summerschool /home/jovyan/work/
-USER root
-RUN chown -R jovyan:users  /home/jovyan
-USER jovyan
+RUN git clone https://github.com/johnhw/computationalchi2017.git /home/jovyan/work

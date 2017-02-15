@@ -6,4 +6,4 @@ RUN pip2 install matplotlib==2.0.0
 RUN jt -t grade3 -f fira -nf oxygensans -tf oxygensans -T
 RUN jupyter contrib nbextension install --user
 ADD .jupyter /home/jovyan/.jupyter/
-RUN git clone https://github.com/johnhw/computationalchi2017.git /home/jovyan/work
+RUN git clone --recursive https://github.com/johnhw/computationalchi2017.git /home/jovyan/work
